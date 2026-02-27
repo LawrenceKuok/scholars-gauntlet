@@ -1,0 +1,274 @@
+/* === Scholar's Gauntlet — Support & Privacy Website === */
+:root {
+  --navy: #0a0e1a;
+  --charcoal: #1a1e2e;
+  --dark-blue: #141828;
+  --electric-blue: #3b82f6;
+  --cyan: #06b6d4;
+  --cyan-glow: #22d3ee;
+  --indigo: #4f46e5;
+  --red: #ef4444;
+  --orange: #f97316;
+  --green: #22c55e;
+  --gold: #eab308;
+  --white: #f1f5f9;
+  --gray: #64748b;
+  --gray-light: #94a3b8;
+  --gray-dark: #334155;
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* === NAV === */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 14, 26, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--gray-dark);
+}
+
+.nav-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.nav-brand .accent {
+  color: var(--electric-blue);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--gray-light);
+  text-decoration: none;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+}
+
+.nav-link:hover {
+  color: var(--white);
+}
+
+.nav-link.active {
+  color: var(--cyan);
+  border-bottom: 2px solid var(--cyan);
+}
+
+/* === CONTAINER === */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+/* === HERO === */
+.hero {
+  text-align: center;
+  padding: 4rem 0 3rem;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--gray-light);
+  margin-top: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* === CARDS === */
+.card {
+  background: var(--charcoal);
+  border: 1px solid var(--gray-dark);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--cyan);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--gray-dark);
+}
+
+.card p {
+  color: var(--gray-light);
+  margin-bottom: 0.75rem;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+.card strong {
+  color: var(--white);
+}
+
+.card ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.card ul li {
+  color: var(--gray-light);
+  padding: 0.35rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 6px;
+  height: 6px;
+  background: var(--electric-blue);
+}
+
+/* === EMAIL LINK === */
+.email-link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  color: var(--electric-blue);
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.08);
+  margin: 1rem 0;
+  transition: all 0.2s;
+}
+
+.email-link:hover {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: var(--electric-blue);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-style: italic;
+}
+
+/* === FAQ === */
+.faq {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.faq:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faq-q {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.faq-a {
+  color: var(--gray-light);
+  font-size: 1rem;
+}
+
+/* === POLICY SECTIONS === */
+.policy p {
+  margin-bottom: 0.75rem;
+}
+
+/* === FOOTER === */
+.footer {
+  border-top: 1px solid var(--gray-dark);
+  padding: 2rem;
+  text-align: center;
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--gray-light);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: var(--electric-blue);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 640px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .container {
+    padding: 0 1rem 3rem;
+  }
+}
